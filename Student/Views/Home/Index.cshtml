@@ -1,0 +1,65 @@
+﻿@model Interview_Registration
+
+<h1><center>REGISTRATION FORM</center></h1>
+<br />
+<h3>Personal Information</h3><br />
+
+@Html.Label("Name")
+<br />@Html.TextBoxFor(s => s.Name) 
+<br /><br />
+
+@Html.Label("Age")
+<br />@Html.TextBoxFor(s=>s.Age)
+<br /><br />
+
+@Html.Label("Address")
+<br />@Html.TextBoxFor(s=>s.Address)
+<br /><br />
+
+
+
+@Html.Label("Choose a City")
+@Html.DropDownListFor(m => m.City,
+            new SelectList(Enum.GetValues(typeof(City))),
+            "Select City")
+           <br /><br />
+           
+
+@Html.Label("Gender")
+@Html.DropDownListFor(m => m.Gender,
+            new SelectList(Enum.GetValues(typeof(Gender))),
+            "Select Gender")
+<br /><br />
+
+
+@Html.Label("Job Role")
+<br />@Html.CheckBox("Software Developer") Programmer Analyst
+<br />@Html.CheckBox(" UI Designer") Software Engineer
+<br />@Html.CheckBox("System Engineer") System Engineer
+<br />@Html.CheckBox("Junior developer") Junior developer
+<br /><br />
+
+
+
+@Html.Label("Experience")
+<br />@Html.RadioButtonFor(m=>m.Experience,"Fresher") Fresher
+<br />@Html.RadioButtonFor(m=>m.Experience, "Experience") Experience
+<br /><br />
+
+
+<input type="submit" value="submit" name="SUBMIT" class="actionButton" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
